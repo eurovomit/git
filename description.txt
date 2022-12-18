@@ -24,6 +24,83 @@ git add description.txt
 удалить папку рекурсивно из отслеживаемых
 git rm -r --cached .idea
 
-
+удалить файл из отслеживаемых
 git rm --cached description.txt
+
+сделать коммит
+git add *
+git commit -m "ver. 1.0"
+
+посмотреть историю изменений
+git log
+
+посмотреть последнее изменение
+git log -1
+
+посмотреть что именно изменили в последнем коммите
+git log -1 -p
+
+вернуть изменения после коммита
+git checkout -- description.txt
+
+посмотреть изменения после последнего коммита
+git diff --staged
+
+игнорировать файлы и папки
+создать файл .gitignore и там прописать файлы и папки, например
+.idea/
+.gitignore
+2.txt
+
+загрузить проект на github через https
+git remote add origin https://github.com/eurovomit/git.git
+git branch -M main
+git push -u origin main
+
+скачать проект с github через SSH
+ssh ключ генерируем на компе через git.bash командой  ssh-keygen
+добавляем этот ключ в профиле github через настройки профиля - справа вверху
+затем в терминале команда
+git clone git@github.com:eurovomit/git.git
+
+показать ветки
+git branch
+
+создать новую ветку
+git branch branch2
+
+перейти на ветку branch2
+git checkout branch2
+
+удалить ветку, она должна быть не активна
+git branch -d branch2
+удалить в любом случае
+git branch -D branch2
+
+создать ветку и сделать ее активной
+git checkout -b branch2
+
+перейти на старую версию
+git checkout 759bf6427065ae14798ba2bf7f02ea20661c0780
+
+восстановить последнюю версию
+git checkout main
+
+изменить последний комит
+git commit --amend
+откроется редактор
+изменить название комита можно -> INSERT -> меняем название -> ESC -> :wq -> ENTER
+сохранятся изменения в последний комит
+
+удалить последний комит
+git reset --hard HEAD~
+
+удалить 2 последних комита
+git reset --hard HEAD~2
+
+удалить последние комиты, но содержимое проекта останется, просто оно перейдет в предыдущий комит
+git reset --soft HEAD~3
+
+залить на github наплевав на уже залитые комиты
+git push --force
 
