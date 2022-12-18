@@ -1,0 +1,29 @@
+посмотреть версию git
+git --version
+
+конфигурировать данные git
+git config --global user.name "Alexey Alexeev"
+git config --global user.email "eurodeveloper@ya.ru"
+
+посмотреть данные конфигурации
+git config -l
+
+установить git в проект, находясь в текущей директории
+git init .
+
+посмотреть статус git
+git status
+
+добавить все файлы для отслеживания
+git add .
+git add *
+
+добавить файл для отслеживания
+git add description.txt
+
+удалить папку рекурсивно из отслеживаемых
+git rm -r --cached .idea
+
+
+git rm --cached description.txt
+
